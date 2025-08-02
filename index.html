@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XILIN Bank</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav_left"><h2>XILIN</h2></div>
+
+    <nav class="nav_center" id="navLinks">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav_right">
+      <a href="login.html"><button class="nav_btn">Login</button></a>
+      <button class="nav_btn nav_btn--outline">Sign Up</button>
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="lmain">
+      <div class="hero-container">
+        <div class="quarter-circle"></div>
+        <h1 class="hero-text">
+          Your Trusted Partner in Building a<br />
+          Secure and Prosperous Financial Future
+        </h1>
+      </div>
+    </div>
+    <div class="rmain">
+      <div class="credit-card">
+        <div class="chip"></div>
+        <div class="card-number">1234 5678 9012 3456</div>
+        <div class="card-details">
+          <div class="cardholder">Vihanga Nimsara</div>
+          <div class="expiry">07/29</div>
+        </div>
+        <div class="brand">VISA</div>
+      </div>
+    </div>
+  </main>
+
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <h3>Secure Online Banking</h3>
+        <p>Access your account anytime, anywhere with top security.</p>
+      </div>
+      <div class="service-card">
+        <h3>Investment Planning</h3>
+        <p>Grow your wealth with personalized investment advice.</p>
+      </div>
+      <div class="service-card">
+        <h3>Loan Solutions</h3>
+        <p>Flexible loan options to meet your financial needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>"XILIN’s services helped me save more and plan my future efficiently."</p>
+        <span>- Sarah L.</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"Great customer support and very secure transactions."</p>
+        <span>- Michael T.</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"I got my home loan approved quickly with great rates."</p>
+        <span>- Priya S.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <h3>XILIN Bank</h3>
+      <p>© 2025 XILIN Bank. All rights reserved.</p>
+    </div>
+    <div class="footer-contact">
+      <p>Email: support@xilinbank.com</p>
+      <p>Phone: +94 123 456 789</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook" class="social-icon">📘</a>
+        <a href="#" aria-label="Twitter" class="social-icon">🐦</a>
+        <a href="#" aria-label="LinkedIn" class="social-icon">🔗</a>
+      </div>
+    </div>
+
+    <!-- Premium Button -->
+  <section class="premium-section">
+    <button class="premium-btn" id="openPayment">Go Premium</button>
+  </section>
+
+  <!-- Payment Modal -->
+  <div class="payment-modal" id="paymentModal">
+    <div class="payment-content">
+      <span class="close-btn" id="closePayment">&times;</span>
+      <h2>Upgrade to Premium</h2>
+      <form id="paymentForm">
+        <div class="form-group">
+          <label for="cardName">Cardholder Name</label>
+          <input type="text" id="cardName" placeholder="Enter name" required />
+        </div>
+        <div class="form-group">
+          <label for="cardNumber">Card Number</label>
+          <input type="text" id="cardNumber" maxlength="16" placeholder="1234 5678 9012 3456" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required />
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" maxlength="3" placeholder="***" required />
+          </div>
+        </div>
+        <button type="submit" class="pay-btn">Pay Now</button>
+      </form>
+    </div>
+  </div>
+
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

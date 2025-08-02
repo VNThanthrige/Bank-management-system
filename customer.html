@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenco - Finance Dashboard</title>
+    <link rel="stylesheet" href="customer.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1 class="greeting">Hello, <span class="username">Vihanga Nimsara</span></h1>
+                <p class="subtitle">View and control your finances here!</p>
+            </div>
+            
+            <a href="Calendar.html"><button class="cc">CalendarDates</button></a>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Top Row -->
+            <div class="top-row">
+                <!-- Balance Statistics -->
+                <div class="card balance-card">
+                    <h3 class="card-title">Balance Statistics</h3>
+                    <div class="balance-amount">
+                        <span class="currency">$</span>
+                        <span class="amount" id="balanceAmount">38,729.61</span>
+                        <span class="total-text">Total amount</span>
+                    </div>
+                    
+                    <div class="balance-chart">
+                        <div class="chart-info">
+                            <div class="chart-percentage">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>14%</span>
+                            </div>
+                            <p class="chart-description">Always see your earning updates</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Credit Card -->
+                <div class="card credit-card-container">
+                    <div class="credit-card">
+                        <div class="card-header">
+                            <span class="bank-name">THE BANK OF ANYTHING</span>
+                        </div>
+                        <div class="card-chip"></div>
+                        <div class="card-number">•••• •••• •••• 2734</div>
+                        <div class="card-info">
+                            <div class="card-dates">
+                                <span class="date">3/18</span>
+                                <span class="date">3/28</span>
+                            </div>
+                            <div class="card-holder">XILIN</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics -->
+                <div class="card analytics-card">
+                    <div class="card-header-with-menu">
+                        <h3 class="card-title">Analytics</h3>
+                        <button class="menu-btn">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="analytics-legend">
+                        <div class="legend-item">
+                            <div class="legend-dot done"></div>
+                            <span>Done</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot progress"></div>
+                            <span>In progress</span>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-chart">
+                        <div class="progress-circle">
+                            <svg viewBox="0 0 36 36" class="circular-chart">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="circle" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            </svg>
+                            <div class="percentage">
+                                <span class="number">90%</span>
+                                <span class="label">Done</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="bottom-row">
+                <!-- Last Transactions -->
+                <div class="card transactions-card">
+                    <div class="card-header-with-menu">
+                        <h3 class="card-title">Last Transactions</h3>
+                        <button class="menu-btn">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="transactions-list">
+                        <div class="transaction-item">
+                            <div class="transaction-icon apple">
+                                <i class="fab fa-apple"></i>
+                            </div>
+                            <div class="transaction-info">
+                                <h4>Apple</h4>
+                                <span class="date">03 April, 2024</span>
+                            </div>
+                            <div class="transaction-amount">$653</div>
+                            <button class="transaction-menu">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon person">
+                                
+                            </div>
+                            <div class="transaction-info">
+                                <h4>Ralph Edwards</h4>
+                                <span class="date">01 April, 2024</span>
+                            </div>
+                            <div class="transaction-amount">$2,643</div>
+                            <button class="transaction-menu">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon person">
+                                
+                            </div>
+                            <div class="transaction-info">
+                                <h4>Jerome Bell</h4>
+                                <span class="date">27 March, 2024</span>
+                            </div>
+                            <div class="transaction-amount">$20</div>
+                            <button class="transaction-menu">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expenses & Income -->
+                <div class="card expenses-card">
+                    <div class="card-header-with-menu">
+                        <h3 class="card-title">Expenses & Income</h3>
+                        <button class="menu-btn">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="expenses-content">
+                        <div class="expenses-stats">
+                            <div class="stat-item">
+                                <span class="stat-percentage">60%</span>
+                                <span class="stat-label">Expenses</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-percentage">40%</span>
+                                <span class="stat-label">Income</span>
+                            </div>
+                        </div>
+                        
+                        <div class="expenses-bars">
+                            <div class="expense-bar">
+                                <div class="bar-fill expenses" style="width: 60%"></div>
+                            </div>
+                            <div class="income-bar">
+                                <div class="bar-fill income" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Feature -->
+            <div class="premium-banner">
+                <div class="premium-content">
+                    <div class="premium-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="premium-text">
+                        <h4>More features?</h4>
+                        <p>Update your account to premium to get more features</p>
+                    </div>
+                    <br>
+                    <button class="premium-btn">Go to premium</button>
+                    <br>
+                    <br>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <div class="payment-modal" id="paymentModal">
+    <div class="payment-content">
+        <span class="close-btn" id="closePayment">&times;</span>
+        <h2>Upgrade to Premium</h2>
+        <form id="paymentForm">
+        <div class="form-group">
+            <label for="cardName">Cardholder Name</label>
+            <input type="text" id="cardName" placeholder="Enter name" required />
+        </div>
+        <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" maxlength="16" placeholder="1234 5678 9012 3456" required />
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required />
+            </div>
+            <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" maxlength="3" placeholder="***" required />
+            </div>
+        </div>
+        <button type="submit" class="pay-btn">Pay Now</button>
+        </form>
+    </div>
+    </div>
+
+
+    <script src="customer.js"></script>
+</body>
+</html>

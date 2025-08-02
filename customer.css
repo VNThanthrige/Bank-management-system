@@ -1,0 +1,718 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0a0f;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo-icon {
+    width:60px;
+    height: 50px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.logo-text {
+    text-align: center;
+}
+
+.logo-title {
+    display: block;
+    font-size: 10px;
+    color: #9ca3af;
+    line-height: 1.2;
+}
+
+.logo-subtitle {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.nav-item {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: #6b7280;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+}
+
+.nav-item.active::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    width: 3px;
+    height: 20px;
+    background: #6366f1;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 80px;
+    min-height: 100vh;
+    background: #0a0a0f;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    border-bottom: 1px solid #1f1f2e;
+}
+
+.header-left h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.username {
+    color: #6366f1;
+}
+
+.subtitle {
+    color: #9ca3af;
+    font-size: 16px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.user-avatars {
+    display: flex;
+    align-items: center;
+    gap: -8px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #1f1f2e;
+    margin-left: -8px;
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    position: relative;
+}
+
+.avatar-more {
+    width: 35px;
+    height: 35px;
+    background: #2a2a3a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.avatar-more:hover {
+    background: #3a3a4a;
+    color: #ffffff;
+}
+
+.cc{
+    background-color: #ffffff;
+    color: #6c63ff;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 28px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Dashboard Content */
+.dashboard-content {
+    padding: 30px 40px;
+}
+
+.top-row,
+.bottom-row {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.top-row {
+    grid-template-columns: 1fr 400px 300px;
+}
+
+.bottom-row {
+    grid-template-columns: 1fr 400px;
+}
+
+/* Cards */
+.card {
+    background: #151521;
+    border: 1px solid #2a2a3a;
+    border-radius: 20px;
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: #3a3a4a;
+    transform: translateY(-2px);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.card-header-with-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+    background: #2a2a3a;
+    color: #ffffff;
+}
+
+/* Balance Card */
+.balance-amount {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin-bottom: 25px;
+}
+
+.currency {
+    font-size: 24px;
+    color: #9ca3af;
+}
+
+.amount {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.total-text {
+    font-size: 14px;
+    color: #6b7280;
+    margin-left: 10px;
+}
+
+.balance-chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.chart-info {
+    flex: 1;
+}
+
+.chart-percentage {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.chart-percentage i {
+    color: #10b981;
+    font-size: 14px;
+}
+
+.chart-percentage span {
+    color: #10b981;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.chart-description {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.chart-bars {
+    display: flex;
+    align-items: end;
+    gap: 12px;
+    height: 80px;
+}
+
+.bar {
+    width: 20px;
+    background: linear-gradient(to top, #6366f1, #8b5cf6);
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.bar:hover {
+    transform: scaleY(1.1);
+}
+
+.bar::after {
+    content: attr(data-month);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Credit Card */
+.credit-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 20px;
+}
+
+.credit-card {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+    color: white;
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: transform 0.3s ease;
+}
+
+.credit-card:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.bank-name {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.card-chip {
+    width: 35px;
+    height: 25px;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.card-chip::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: linear-gradient(45deg, #ffc107, #ffeb3b);
+    border-radius: 2px;
+}
+
+.card-number {
+    font-size: 18px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.card-dates {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.card-holder {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-logo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.mastercard-logo {
+    display: flex;
+    gap: -5px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.circle.red {
+    background: #eb001b;
+    margin-right: -5px;
+}
+
+.circle.yellow {
+    background: #ff5f00;
+}
+
+/* Analytics Card */
+.analytics-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.legend-dot.done {
+    background: #6366f1;
+}
+
+.legend-dot.progress {
+    background: #f59e0b;
+}
+
+.legend-dot.todo {
+    background: #ef4444;
+}
+
+.analytics-chart {
+    display: flex;
+    justify-content: center;
+}
+
+.progress-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.circular-chart {
+    width: 100%;
+    height: 100%;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #2a2a3a;
+    stroke-width: 2;
+}
+
+.circle {
+    fill: none;
+    stroke: #6366f1;
+    stroke-width: 3;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.percentage .number {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.percentage .label {
+    display: block;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* Transactions Card */
+.transactions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.transaction-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.transaction-item:hover {
+    background: #1f1f2e;
+}
+
+.transaction-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.transaction-icon.apple {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.transaction-icon.person img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.transaction-info {
+    flex: 1;
+}
+
+.transaction-info h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    color: #ffffff;
+}
+
+.transaction-info .date {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.transaction-amount {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.transaction-menu {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.transaction-menu:hover {
+    background: #2a2a3a;
+    color: #ffffff;
+}
+
+/* Expenses Card */
+.expenses-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.expenses-stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-percentage {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+
+.premium-btn {
+  background: white;
+  color: #6c63ff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.premium-btn:hover {
+  background: #5145cd;
+  color: white;
+}
+
+.payment-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.payment-content {
+  background: #1e1e2f;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  animation: fadeIn 0.3s ease;
+}
+
+.payment-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #2c2c3a;
+  color: #fff;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.pay-btn {
+  width: 100%;
+  background: #6c63ff;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pay-btn:hover {
+  background: #4c46d1;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
